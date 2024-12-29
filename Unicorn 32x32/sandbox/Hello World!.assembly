@@ -1,0 +1,138 @@
+const lA = 0xf27c # 11110 01001 11110
+const lB = 0x557e # 01010 10101 11111
+const lC = 0x8c7e # 10001 10001 11111
+const lD = 0x747e # 01110 10001 11111
+const lE = 0x8d7e # 10001 10101 11111
+const lF = 0x97e # 00001 00101 11111
+const lG = 0xcc5c # 11001 10001 01110
+const lH = 0xf93e # 11111 00100 11111
+const lI = 0x8fe2 # 10001 11111 10001
+const lJ = 0xfc30 # 11111 10000 11000
+const lK = 0xd93e # 11011 00100 11111
+const lL = 0x843e # 10000 10000 11111
+const lM = 0xf8be # 11111 00010 11111
+const lN = 0xf07e # 11110 00001 11111
+const lO = 0x745c # 01110 10001 01110
+const lP = 0x397e # 00111 00101 11111
+const lQ = 0xba5e # 10111 01001 01111
+const lR = 0xd97e # 11011 00101 11111
+const lS = 0x6d6c # 01101 10101 10110
+const lT = 0xfc2 # 00001 11111 00001
+const lU = 0xfc3e # 11111 10000 11111
+const lV = 0x7c1e # 01111 10000 01111
+const lW = 0xfa3e # 11111 01000 11111
+const lX = 0xd936 # 11011 00100 11011
+const lY = 0x1f06 # 00011 11100 00011
+const lZ = 0x9d72 # 10011 10101 11001
+const l0 = 0xfc7e # 11111 10001 11111
+const l1 = 0x87e4 # 10000 11111 10010
+const l2 = 0x9572 # 10010 10101 11001
+const l3 = 0x7562 # 01110 10101 10001
+const l4 = 0xf21e # 11110 01000 01111
+const l5 = 0xed6e # 11101 10101 10111
+const l6 = 0xed7c # 11101 10101 11110
+const l7 = 0x3e42 # 00111 11001 00001
+const l8 = 0xfd7e # 11111 10101 11111
+const l9 = 0x7d6e # 01111 10101 10111
+const l↓ = 0x47d0 # 01000 11111 01000
+const l↑ = 0x17c4 # 00010 11111 00010
+const l> = 0x22a2 # 00100 01010 10001
+const l< = 0x8a88 # 10001 01010 00100
+const l. = 0x20 # 00000 00000 10000
+const l, = 0x220 # 00000 01000 10000
+const l: = 0x280 # 00000 01010 00000
+const l; = 0x2a0 # 00000 01010 10000
+const ldash = 0x2108 # 00100 00100 00100
+const l_ = 0x8420 # 10000 10000 10000
+const l' = 0xc0 # 00000 00011 00000
+const lplus = 0x2388 # 00100 01110 00100
+const lstar = 0x5114 # 01010 00100 01010
+const lpercent = 0x9112 # 10010 00100 01001
+const lslash = 0xba0 # 00001 01110 10000
+const l\ = 0x8382 # 10000 01110 00001
+const lbracket = 0x8b80 # 10001 01110 00000
+const l) = 0x3a2 # 00000 01110 10001
+const l[ = 0x8fc0 # 10001 11111 00000
+const l] = 0x7e2 # 00000 11111 10001
+const lcaret = 0x1044 # 00010 00001 00010
+const l= = 0x5294 # 01010 01010 01010
+const lquotation = 0x1806 # 00011 00000 00011
+const l! = 0x5c0 # 00000 10111 00000
+const l? = 0x3d42 # 00111 10101 00001
+
+const letter = 1
+const pos = 4
+const temp = 6
+const xCounter = 7
+const yCounter = 8
+
+label init
+dis 1 null null
+inc 1 1
+uneql_ii 1 2048 init
+
+seti lH letter
+seti 12 pos
+calli print
+seti lE letter
+seti 140 pos
+calli print
+seti lL letter
+seti 268 pos
+calli print
+seti lL letter
+seti 396 pos
+calli print
+seti lO letter
+seti 524 pos
+calli print
+seti lW letter
+seti 780 pos
+calli print
+seti lO letter
+seti 908 pos
+calli print
+seti lR letter
+seti 1036 pos
+calli print
+seti lL letter
+seti 1164 pos
+calli print
+seti lD letter
+seti 1292 pos
+calli print
+seti l! letter
+seti 1420 pos
+calli print
+
+label loop
+jmpi loop
+
+label print
+inc yCounter yCounter
+grt_ii yCounter 5 newColumn
+shr_i letter 1 letter
+and_i 1 0x0001 temp
+zer_i temp off
+or_i pos 0xF800 temp 
+dis temp null null
+inc pos pos
+jmpi print
+
+label off
+dis pos null null
+inc pos pos
+jmpi print
+
+label newColumn
+add_i pos 27 pos
+inc xCounter xCounter
+del yCounter
+uneql_ii xCounter 3 print
+jmpi exit
+
+label exit
+del pos
+del xCounter
+del yCounter
+ret
