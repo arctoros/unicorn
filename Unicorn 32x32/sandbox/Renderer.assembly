@@ -1,0 +1,15 @@
+const pixel = 1
+const counter = 2
+const temp = 3
+const display = 0xE000
+
+label loop
+file counter null pixel
+shl_i pixel 10 pixel
+or pixel counter display
+inc counter counter
+eql_ii counter 1024 end
+jmpi loop
+
+label end
+jmpi end
