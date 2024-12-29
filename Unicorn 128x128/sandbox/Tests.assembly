@@ -1,0 +1,66 @@
+# mem
+seti 6 1
+seti 4 16
+mem 1 16 null
+mem null 16 2
+
+# General
+addi_ 18 1 1
+add_i 1 18 1
+addii 9 9 1
+add 1 1 1
+
+# AU
+addi_ 36 1 1
+sub_i 1 36 2
+mulii 12 3 3
+divii 72 2 4
+negi 220 5
+inci 35 6
+deci 37 7
+ashrii 144 2 8
+
+# LU
+andii 244 47 9
+orii 32 36 10
+xorii 32 4 11
+noti 219 12
+shrii 32 4 13
+shlii 2 3 14
+rorii 72 1 15
+rolii 9 2 16
+
+# CU
+label jmp
+jmpi grt
+label zer
+zerii 0 Data
+label notzer
+notzerii 36 zer
+label less
+lessiii 12 36 notzer
+label lesseql
+lesseqliii 36 36 less
+label eql
+eqliii 36 36 lesseql
+label uneql
+uneqliii 36 12 eql
+label grteql
+grteqliii 36 36 uneql
+label grt
+grtiii 36 12 grteql
+
+# Data
+label Data
+seti 123 17
+set 17 18
+del 17
+pshi 24
+psh 18
+pop 19
+calli function
+call 18
+
+label function
+seti 12 19
+ret

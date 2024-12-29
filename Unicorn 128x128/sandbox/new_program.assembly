@@ -1,0 +1,12 @@
+const pixel = 1
+const counter = 2
+
+label loop
+file counter null pixel
+dis pixel null null
+add_i counter 2 counter
+eql_ii counter 32768 end
+jmpi loop
+0b000
+label end
+jmpi end
