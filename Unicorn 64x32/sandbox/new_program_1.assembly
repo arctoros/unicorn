@@ -1,7 +1,0 @@
-label loop
-ror_i 3 5 1
-add 1 2 1
-dis 1 null null
-inc 2 2
-inc 3 3
-jmpi loop

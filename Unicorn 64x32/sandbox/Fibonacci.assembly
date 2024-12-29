@@ -1,9 +1,0 @@
-seti 1 2
-
-label loop
-add 1 2 3
-set 2 1
-set 3 2
-mem 2 4 null
-inc 4 4 
-jmpi loop
