@@ -1,0 +1,9 @@
+label loop
+outputi 3 _ _
+input _ _ 1
+sub_i 1 5 1
+output 1 _ _
+input _ _ 1
+dec 1 1
+output 1 _ _
+jmpi loop
