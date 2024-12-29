@@ -15,12 +15,11 @@ The python code for converting pictures is included too.
 The Font.md.excalidraw contains the custon 5x3 and the Excel file contains the architecture of unicorn.  
 
 
+128x128:  
+<img width="1139" alt="Screenshot 2024-12-29 at 12 22 15" src="https://github.com/user-attachments/assets/50ba14bb-cca7-4828-b84a-55191fae75a1" />
+
+64x32:  
+<img width="1042" alt="Screenshot 2024-12-29 at 12 25 51" src="https://github.com/user-attachments/assets/87db33bb-9c36-40fd-ae69-70305fd8f984" />
 
 32x32:  
 <img width="1183" alt="Screenshot 2024-12-29 at 12 12 34" src="https://github.com/user-attachments/assets/b42fc3a1-e577-4c3e-8bc3-72d108248fef" />
-
-64x32:  
-<img width="1120" alt="Screenshot 2024-12-29 at 12 12 12" src="https://github.com/user-attachments/assets/4fb147f5-9b7a-44be-9513-608b3e8fc27a" />
-
-128x128:  
-<img width="1140" alt="Screenshot 2024-12-29 at 12 12 53" src="https://github.com/user-attachments/assets/e5c820f3-5287-4f83-bebe-ad08ebbc216c" />
